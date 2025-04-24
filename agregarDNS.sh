@@ -3,7 +3,6 @@
 
 
 
-#archivo=$(bash limpiarScript.sh archivooriginal.csv)
 
 
 archivo="archivo_limpio.csv"
@@ -56,9 +55,6 @@ programa1_def=$(declare -f programa1)
 programa2_def=$(declare -f programa2)
 programa3_def=$(declare -f programa3)
 
-#echo "Contenido del archivo de entrada:"
-#cat "$archivo"
-#hexdump -C "$archivo"
 
 
 # Procesar CSV
@@ -82,9 +78,3 @@ tail -n +2 "$archivo" | awk -v FPAT='([^,]*)|(\"[^\"]*\")' \
 '
 
 
-
-
-# Función que agrega una entrada a /etc/hosts
-# Aquí se llama la función con los parámetros del script
-# $1 = nombre del dominio, $2 (opcional) = IP
-#agregar_dns_local "$1" "$2"
