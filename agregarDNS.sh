@@ -1,9 +1,7 @@
 #!/bin/bash
 #set -x
 
-
-
-#archivo=$(bash limpiarScript.sh archivooriginal.csv)
+#Este script crea las traducciones de nombre de maquina a las ip's correspondientes 
 
 
 archivo="archivo_limpio.csv"
@@ -43,18 +41,11 @@ programa1() {
 
 
 
-programa2() {
-  echo "Soy programa 2: Columna 7 = $1"
-}
 
-programa3() {
-  echo "Soy programa 3: Columna 8 = $1"
-}
 
 # Exportar funciones como texto
 programa1_def=$(declare -f programa1)
-programa2_def=$(declare -f programa2)
-programa3_def=$(declare -f programa3)
+
 
 #echo "Contenido del archivo de entrada:"
 #cat "$archivo"
@@ -63,7 +54,7 @@ programa3_def=$(declare -f programa3)
 
 # Procesar CSV
 tail -n +2 "$archivo" | awk -v FPAT='([^,]*)|(\"[^\"]*\")' \
--v p1="$programa1_def" -v p2="$programa2_def" -v p3="$programa3_def" '
+-v p1="$programa1_def"  '
 {
   gsub(/"/, "", $4); gsub(/"/, "", $5);
   gsub(/"/, "", $7); gsub(/"/, "", $8);
@@ -71,11 +62,6 @@ tail -n +2 "$archivo" | awk -v FPAT='([^,]*)|(\"[^\"]*\")' \
   cmd = "bash -c '\''" p1 " ; programa1 \"" $4 "\" \"" $5 "\"'\''"
   system(cmd)
 
-  cmd = "bash -c '\''" p2 " ; programa2 \"" $7 "\"'\''"
-  system(cmd)
-
-  cmd = "bash -c '\''" p3 " ; programa3 \"" $8 "\"'\''"
-  system(cmd)
 
   print "----"
 }
