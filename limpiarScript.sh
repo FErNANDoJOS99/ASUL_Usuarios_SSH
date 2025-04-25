@@ -5,26 +5,11 @@
 
 
 archivo="archivooriginal.csv"
-#poner
-#archivo="salida.csv"
-
-
-# poner2
-#archivo="archivooriginal.csv"
-
-
-# archivo="$1"
-
-# # Verifica que se pasó un archivo válido
-# if [ ! -f "$archivo" ]; then
-#     echo "❌ Archivo no encontrado: $archivo"
-#     exit 1
-# fi
 
 
 
 
-# Poner
+
 archivo_salida="archivo_limpio.csv"
 
 # Agregar la primera línea (cabecera) sin cambios
@@ -46,14 +31,6 @@ awk '{gsub(/[0-9]{1,2}\/[0-9]{1,2}\/[0-9]{4}/, "\n&"); print}' \
 
 
 
-
-# Agregar el contenido procesado al archivo final
-#cat archivo_salida2.csv >> "$archivo_salida"
-#Poner
 cat archivo_salida2.csv > "$archivo_salida"
 
-
-
-# Opcional: eliminar retorno de carro (\r) si viene de Windows
-# sed -i 's/\r$//' "$archivo_salida"
 

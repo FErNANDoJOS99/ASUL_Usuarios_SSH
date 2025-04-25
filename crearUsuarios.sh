@@ -20,8 +20,7 @@ programa2() {
 #   entrada="${entrada//\"/}"
 #   entrada="${entrada//\'/}"
 
-    # Eliminar caracteres invisibles y de control (usando tr)
-  #entrada=$(echo "$entrada" | tr -d '\r\n\t')
+
 
   # Separar por comas
   IFS=',' read -ra elementos <<< "$entrada"
@@ -43,7 +42,7 @@ programa2() {
     echo "$limpio2"
    done 
 }
-#nombre_limpio=$(echo "$nombre_raw" | sed 's/[0-9. ]//g')
+
 
 
 

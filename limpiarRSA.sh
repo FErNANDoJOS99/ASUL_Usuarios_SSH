@@ -6,16 +6,7 @@
 archivo="archivooriginal.csv"
 salida="salida.csv"
 
-# Verifica que se pasó un archivo válido
-# if [ ! -f "$archivo" ]; then
-#     echo "❌ Archivo no encontrado: $archivo"
-#     exit 1
-# fi
 
-
-
-# Eliminar desde "ssh-rsa hasta la siguiente comilla doble , eleminamos los espacios en blanco  , cambiamos los
-# saltos de linea (\n) si le precede una comilla y ponemos una coma
 
 
 

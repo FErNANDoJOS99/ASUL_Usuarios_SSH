@@ -1,6 +1,7 @@
 #!/bin/bash
 #set -x
 
+
 #Este script crea las traducciones de nombre de maquina a las ip's correspondientes 
 
 
@@ -47,9 +48,6 @@ programa1() {
 programa1_def=$(declare -f programa1)
 
 
-#echo "Contenido del archivo de entrada:"
-#cat "$archivo"
-#hexdump -C "$archivo"
 
 
 # Procesar CSV
@@ -68,9 +66,3 @@ tail -n +2 "$archivo" | awk -v FPAT='([^,]*)|(\"[^\"]*\")' \
 '
 
 
-
-
-# Función que agrega una entrada a /etc/hosts
-# Aquí se llama la función con los parámetros del script
-# $1 = nombre del dominio, $2 (opcional) = IP
-#agregar_dns_local "$1" "$2"
