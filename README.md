@@ -11,3 +11,6 @@ Se utiliza el sudo porque se agregan usuarios a la computadora.
 Ademas se requiere tener el archivo original que se obtuvo del classroom
 `archivoorginal.csv`
 
+Se logro solo ejecutar los primeros 3 puntos de la practica que era en equipo , como archivo
+de entrada es tal cual el csv proporcionado de classroom , todo el proceso de separar la información
+lo hacen los scripts
