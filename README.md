@@ -1,7 +1,9 @@
 # ASUL_Usuarios_SSH
 
 
-## main.sh 
+## Jose Fernando Cervantes Duarte  422100827
+
+### main.sh 
 Ese es el archivo principal para que funcione 
 * chmod +x main.sh
 * sudo ./main.sh 
